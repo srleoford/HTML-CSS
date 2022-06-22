@@ -1,0 +1,68 @@
+/*!*Always start reference to classes with a '.'*!*/
+/*p.error {*/
+/*    color: red;*/
+/*}*/
+
+/*p.success {*/
+/*    color: #5ab311;*/
+/*}*/
+/*!*!*p tag has to have both classes*!*!*/
+/*p.success.feedback {*/
+/*    border: 1px dashed #5ab311;*/
+/*}*/
+
+/*!*!* '#' represents the reference to ID*!*!*/
+/*#content {*/
+/*    background-color: #ebebeb;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*!* Targets only 'p' tags inside a 'div' tag*!*/
+/*div p {*/
+/*    color: purple;*/
+/*}*/
+/*!* if there's no space, you're selecting a 'div' WITH the class ".error" *!*/
+/*!* If there's a space, you're selecting any '.error' class inside any 'div' tag*/
+/*    (descended selector) *!*/
+/*div .error {*/
+/*    color: red;*/
+/*}*/
+
+/*!* Targets 'a' tags with 'href' equal to "https://mario.nintendo.com" *!*/
+/*!* If value of href="some string", this will select any 'a' tag with href*/
+/*    value that contains "some string" *!*/
+/*a[href="https://mario.nintendo.com"] {*/
+/*    background-color:  #3dd13d;*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    font-weight: bold;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*!* Using the '$' means any href ENDING with "google" *!*/
+/*a[href$=".com"] {*/
+/*    color: white;*/
+/*    background: red;*/
+/*    border: 2px solid blue;*/
+/*}*/
+
+div {
+    color: lightcoral;
+    border: 1px solid gray;
+    margin: 40px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+/* If there's a parent with 'border' or 'margin', assign those to these attributes */
+div p {
+    border: inherit;
+    margin: inherit;
+    color: crimson;
+}
+
+/* With conflicts like with 'p' tags, the one declared last takes precedence
+    unless otherwise made more specific (i.e. the 'div p' above ^) */
+p {
+    color:  orange;
+}
